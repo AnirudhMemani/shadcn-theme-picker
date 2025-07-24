@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { ReactRenderer } from "@tiptap/react";
 import tippy from "tippy.js";
 import { MentionList } from "@/components/editor/mention-list"; // We'll create this component next
@@ -19,8 +17,7 @@ export const suggestion = {
     // Filter based on the query
     return themeItems
       .filter((item) => {
-        const labelWithoutSpaces =
-          item.label?.replace(/\s+/g, "").toLowerCase() || "";
+        const labelWithoutSpaces = item.label?.replace(/\s+/g, "").toLowerCase() || "";
         const queryWithoutSpaces = query.replace(/\s+/g, "").toLowerCase();
         return labelWithoutSpaces.includes(queryWithoutSpaces);
       })
