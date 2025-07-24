@@ -99,7 +99,7 @@ const ThemeControlPanel = ({
           <HorizontalScrollArea className="mt-2 mb-1 px-4">
             <TabsList className="bg-background text-muted-foreground inline-flex w-fit items-center justify-center rounded-full px-0">
               <TabsTriggerPill value="colors">Colors</TabsTriggerPill>
-              <TabsTriggerPill value="typography">Typography</TabsTriggerPill>
+              {/* <TabsTriggerPill value="typography">Typography</TabsTriggerPill>
               <TabsTriggerPill value="other">Other</TabsTriggerPill>
               <TabsTriggerPill
                 value="ai"
@@ -109,7 +109,7 @@ const ThemeControlPanel = ({
                 <span className="animate-text via-foreground from-muted-foreground to-muted-foreground flex items-center gap-1 bg-gradient-to-r from-50% via-60% to-100% bg-[200%_auto] bg-clip-text text-sm text-transparent">
                   Generate
                 </span>
-              </TabsTriggerPill>
+              </TabsTriggerPill> */}
             </TabsList>
           </HorizontalScrollArea>
 
@@ -145,7 +145,7 @@ const ThemeControlPanel = ({
                 />
               </ControlSection>
 
-              <ControlSection title="Accent Colors">
+              {/* <ControlSection title="Accent Colors">
                 <ColorPicker
                   name="accent"
                   color={currentStyles.accent}
@@ -338,7 +338,7 @@ const ThemeControlPanel = ({
                   onChange={(color) => updateStyle("sidebar-ring", color)}
                   label="Sidebar Ring"
                 />
-              </ControlSection>
+              </ControlSection> */}
             </ScrollArea>
           </TabsContent>
 
@@ -351,7 +351,7 @@ const ThemeControlPanel = ({
                     To use custom fonts, embed them in your project. <br />
                     See{" "}
                     <a
-                      href="https://tailwindcss.com/docs/font-family"
+                      href=""
                       target="_blank"
                       className="hover:text-muted-foreground/90 underline underline-offset-2"
                     >

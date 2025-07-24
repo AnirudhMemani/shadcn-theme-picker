@@ -2,24 +2,16 @@
 
 import ShadcnBlocksLogo from "@/assets/shadcnblocks.svg";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
 import { useFullscreen } from "@/hooks/use-fullscreen";
 import { useThemeInspector } from "@/hooks/use-theme-inspector";
 import { cn } from "@/lib/utils";
 import { ThemeEditorPreviewProps } from "@/types/theme";
-import { Inspect, Maximize, Minimize, MoreVertical } from "lucide-react";
 import Link from "next/link";
 import { lazy, useState } from "react";
 import { HorizontalScrollArea } from "../horizontal-scroll-area";
 import { ThemeToggle } from "../theme-toggle";
-import { TooltipWrapper } from "../tooltip-wrapper";
 import InspectorOverlay from "./inspector-overlay";
 import ColorPreview from "./theme-preview/color-preview";
 import ExamplesPreviewContainer from "./theme-preview/examples-preview-container";
@@ -69,14 +61,14 @@ const ThemePreviewPanel = ({ styles, currentMode }: ThemeEditorPreviewProps) => 
             <TabsList className="bg-background text-muted-foreground inline-flex w-fit items-center justify-center rounded-full px-0">
               <TabsTriggerPill value="cards">Cards</TabsTriggerPill>
 
-              <div className="hidden md:flex">
+              {/* <div className="hidden md:flex">
                 <TabsTriggerPill value="dashboard">Dashboard</TabsTriggerPill>
                 <TabsTriggerPill value="mail">Mail</TabsTriggerPill>
               </div>
               <TabsTriggerPill value="pricing">Pricing</TabsTriggerPill>
-              <TabsTriggerPill value="colors">Color Palette</TabsTriggerPill>
+              <TabsTriggerPill value="colors">Color Palette</TabsTriggerPill> */}
 
-              <DropdownMenu>
+              {/* <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <TooltipWrapper label="More previews" asChild>
                     <Button variant="ghost" size="icon">
@@ -89,7 +81,7 @@ const ThemePreviewPanel = ({ styles, currentMode }: ThemeEditorPreviewProps) => 
                     Typography
                   </DropdownMenuItem>
                 </DropdownMenuContent>
-              </DropdownMenu>
+              </DropdownMenu> */}
             </TabsList>
 
             <div className="flex items-center gap-0.5">
@@ -101,7 +93,7 @@ const ThemePreviewPanel = ({ styles, currentMode }: ThemeEditorPreviewProps) => 
                 />
               )}
               {/* Inspector toggle button */}
-              <TooltipWrapper label="Toggle Inspector" asChild>
+              {/* <TooltipWrapper label="Toggle Inspector" asChild>
                 <Button
                   variant="ghost"
                   size="sm"
@@ -131,7 +123,7 @@ const ThemePreviewPanel = ({ styles, currentMode }: ThemeEditorPreviewProps) => 
                     <Maximize className="transition-all group-hover:scale-120" />
                   )}
                 </Button>
-              </TooltipWrapper>
+              </TooltipWrapper> */}
             </div>
           </HorizontalScrollArea>
 

@@ -1,16 +1,6 @@
 "use client";
 
-import { Footer } from "@/components/footer";
-import { AIGenerationCTA } from "@/components/home/ai-generation-cta";
-import { CTA } from "@/components/home/cta";
-import { FAQ } from "@/components/home/faq";
-import { Features } from "@/components/home/features";
-import { Header } from "@/components/home/header";
-import { Hero } from "@/components/home/hero";
-import { HowItWorks } from "@/components/home/how-it-works";
-import { Roadmap } from "@/components/home/roadmap";
-import { Testimonials } from "@/components/home/testimonials";
-import { ThemePresetSelector } from "@/components/home/theme-preset-selector";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -30,25 +20,9 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <div className="bg-background text-foreground flex min-h-[100dvh] flex-col items-center justify-items-center">
-      <Header
-        isScrolled={isScrolled}
-        mobileMenuOpen={mobileMenuOpen}
-        setMobileMenuOpen={setMobileMenuOpen}
-      />
-      <main className="w-full flex-1">
-        <Hero />
-        <ThemePresetSelector />
-        <Testimonials />
-        <Features />
-        <AIGenerationCTA />
-        <HowItWorks />
-        <Roadmap />
-        <FAQ />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
-  );
+  const router = useRouter();
+
+  router.push("/editor/theme");
+
+  return <></>;
 }

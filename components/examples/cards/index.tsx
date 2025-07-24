@@ -5,7 +5,6 @@ import { CardsCookieSettings } from "@/components/examples/cards/cookie-settings
 import { CardsCreateAccount } from "@/components/examples/cards/create-account";
 import { CardsExerciseMinutes } from "@/components/examples/cards/exercise-minutes";
 import { CardsForms } from "@/components/examples/cards/forms";
-import { CardsPayments } from "@/components/examples/cards/payments";
 import { CardsReportIssue } from "@/components/examples/cards/report-issue";
 import { CardsShare } from "@/components/examples/cards/share";
 import { CardsStats } from "@/components/examples/cards/stats";
@@ -32,20 +31,20 @@ export default function CardsDemo() {
             <CardsForms />
             <CardsTeamMembers />
             <CardsCookieSettings />
-            <div className="hidden flex-col gap-4 @7xl:flex">
+            {/* <div className="hidden flex-col gap-4 @7xl:flex">
               <GithubCard />
               <DatePickerWithRange />
-            </div>
+            </div> */}
           </div>
           <div className="flex flex-col gap-4 pb-4">
-            <CardsCreateAccount />
-            <CardsChat />
-            <GithubCard />
-            <DatePickerWithRange />
+            {/* <CardsCreateAccount /> */}
+            {/* <CardsChat /> */}
+            {/* <GithubCard />
+            <DatePickerWithRange /> */}
 
-            <div className="hidden @7xl:block">
+            {/* <div className="hidden @7xl:block">
               <CardsReportIssue />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -59,10 +58,10 @@ export default function CardsDemo() {
             <CardsExerciseMinutes />
           </div>
         </div>
-        <div className="hidden @3xl:block">
+        {/* <div className="hidden @3xl:block">
           <CardsPayments />
-        </div>
-        <CardsShare />
+        </div> */}
+        {/* <CardsShare /> */}
         <div className="@7xl:hidden">
           <CardsReportIssue />
         </div>

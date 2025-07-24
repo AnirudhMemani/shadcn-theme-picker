@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useEffect, use } from "react";
-import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "@/components/ui/resizable";
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useEditorStore } from "@/store/editor-store";
 import { Theme, ThemeStyles } from "@/types/theme";
 import { Sliders } from "lucide-react";
-import { useEditorStore } from "@/store/editor-store";
+import React, { use, useEffect } from "react";
 import { ActionBar } from "./action-bar/action-bar";
 import ThemeControlPanel from "./theme-control-panel";
 import ThemePreviewPanel from "./theme-preview-panel";
@@ -83,7 +83,7 @@ const Editor: React.FC<EditorProps> = ({ themePromise }) => {
           <ResizablePanel defaultSize={70}>
             <div className="flex h-full flex-col">
               <div className="flex min-h-0 flex-1 flex-col">
-                <ActionBar />
+                {/* <ActionBar /> */}
                 <ThemePreviewPanel styles={styles} currentMode={themeState.currentMode} />
               </div>
             </div>
